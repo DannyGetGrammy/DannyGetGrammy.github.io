@@ -185,7 +185,6 @@
   "Dataset": "数据集",
   "The project uses a balanced 80-track subset of FMA Small, spanning eight genres. Audio files are not bundled in the public GitHub repository.": "项目使用 FMA Small 中一个类别均衡的 80 首曲目子集，涵盖八种音乐风格。公开 GitHub 仓库不包含音频文件。",
   "Code": "代码",
-  "The repository contains the core pipeline, app code, tests, and setup instructions. The Streamlit prototype is not yet linked as a hosted public demo here.": "仓库包含核心流程、应用代码、测试和配置说明。目前此处尚未提供已部署的 Streamlit 公开演示链接。",
   "Browse the SoundBridge repository ↗": "浏览 SoundBridge 仓库 ↗",
   "Audio representation, cosine similarity, text-to-audio search.": "音频表示、余弦相似度与文本到音频检索。",
   "End-to-end modeling, backend engineering, app development, evaluation.": "端到端建模、后端工程、应用开发与评估。",
@@ -206,8 +205,15 @@
   "Automated tests with Vitest, Supertest, and an in-memory MongoDB setup.": "使用 Vitest、Supertest 与内存 MongoDB 环境开展自动化测试。",
   "Selected outcomes": "部分成果",
   "My current CS CV reports more than 50 daily users, 100% test coverage for the described test suite, and a 300 ms reduction in UI refresh latency.": "我目前的计算机科学简历中记录了这些成果：每日用户超过 50 人、所述测试套件的测试覆盖率达到 100%，以及界面刷新延迟降低 300 毫秒。",
-  "As this is a collaborative web platform, additional source links or screenshots can be added once their shareable URLs are confirmed.": "这是一个协作开发的 Web 平台；确认可公开分享的地址后，可以进一步补充源代码链接或截图。",
   "Real-time interaction, web architecture, typed services.": "实时交互、Web 架构与类型化服务。",
   "Full-stack development, Socket.IO features, tests and quality assurance.": "全栈开发、Socket.IO 功能、测试与质量保证。",
-  "SoundBridge →": "SoundBridge →"
+  "SoundBridge →": "SoundBridge →",
+  "SoundBridge music retrieval prototype": "SoundBridge 音乐检索原型界面",
+  "Sarcasm classification confusion matrix with true and predicted labels": "讽刺分类混淆矩阵：真实标签与预测标签",
+  "Strategy.town leaderboard with ranks, games played, wins, and win rates": "Strategy.town 排行榜：排名、对局数、获胜数与胜率",
+  "Open full-size project image": "查看项目图片原图",
+  "Live demo ↗": "在线体验 ↗",
+  "Try SoundBridge ↗": "体验 SoundBridge ↗",
+  "The repository contains the core pipeline, app code, tests, and setup instructions. Try the interactive prototype on Streamlit.": "仓库包含核心流程、应用代码、测试和配置说明。你可以在 Streamlit 上体验交互式原型。",
+  "The screenshot above shows the leaderboard interface, including player rankings, games played, wins, and win rates.": "上方截图展示了排行榜界面，包括玩家排名、对局数、获胜数与胜率。"
 }
