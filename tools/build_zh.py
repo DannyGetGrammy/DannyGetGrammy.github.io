@@ -70,7 +70,7 @@ class ChinesePage(HTMLParser):
             elif key in ('alt', 'aria-label') and value:
                 value = translate(value)
             elif tag == 'meta' and key == 'content' and (
-                data.get('name') == 'description' or
+                data.get('name') in ('description', 'author') or
                 data.get('property') in ('og:title', 'og:description')
             ):
                 value = translate(value)
