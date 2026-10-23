@@ -32,3 +32,22 @@ From the unpacked folder run `python3 -m http.server 8000`, then visit `http://l
 - Replace `Insert Picture` with approved figures/portrait/demo screenshots. Avoid adding unpublished/identifying materials contrary to conference guidelines.
 - Add a public SoundBridge demo URL only when you have actually deployed it.
 
+
+
+## Chinese version
+
+The original pages are English; `zh/` contains their Simplified Chinese counterparts.
+The header language link opens the matching page and keeps the current section.
+Both versions work as static GitHub Pages pages, including without JavaScript.
+
+After editing English page text, update the matching entries in
+`translations/zh-CN.json`, then regenerate Chinese pages from the repository root:
+
+```bash
+python3 tools/build_zh.py
+```
+
+The generator uses only the Python standard library. It rejects new text without
+a translation entry. Names, project names, and technical identifiers intentionally
+retain their original spelling. Commit the generated `zh/` pages along with the
+English pages and translation changes.
