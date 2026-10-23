@@ -35,6 +35,7 @@ class ChinesePage(HTMLParser):
         self.destination = ROOT / 'zh' / source.relative_to(ROOT)
         self.output = []
         self.language_link = False
+        self.publication_authors = False
 
     def local_url(self, value):
         url = urlsplit(value)
@@ -49,6 +50,8 @@ class ChinesePage(HTMLParser):
 
     def start(self, tag, attrs, closed=False):
         data = dict(attrs)
+        if tag == 'p' and 'pub-authors' in data.get('class', '').split():
+            self.publication_authors = True
         language_link = tag == 'a' and 'language-switch' in data.get('class', '').split()
         if language_link:
             self.language_link = True
@@ -87,9 +90,13 @@ class ChinesePage(HTMLParser):
         self.output.append(f'</{tag}>')
         if tag == 'a':
             self.language_link = False
+        if tag == 'p':
+            self.publication_authors = False
 
     def handle_data(self, data):
-        self.output.append(escape('English' if self.language_link else translate(data), quote=False))
+        # Keep the published author spelling, including names inside <strong>.
+        text = 'English' if self.language_link else (data if self.publication_authors else translate(data))
+        self.output.append(escape(text, quote=False))
 
     def handle_decl(self, declaration):
         self.output.append('<!' + declaration + '>')
